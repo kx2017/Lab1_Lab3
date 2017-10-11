@@ -41,6 +41,7 @@ public class Graph {
 						if (! wordMap.containsKey(word)) {
 							//尚未加入words，建立新的映射
 							words.add(word);
+							words.add(word);
 							wordMap.put(word, words.size()-1);
 						}
 					}
@@ -49,11 +50,6 @@ public class Graph {
 			//建立矩阵并计算权重
 			value = new int[words.size()][words.size()];
 			pathFlag = new boolean[words.size()][words.size()];
-			for(int i = 0; i < words.size(); i ++){
-				for(int j = 0; j < words.size(); j ++){
-					pathFlag[i][j] = false;
-				}
-			}
 			String startWord = words.get(0);  //边的起点
 			for (int i = 1; i < tempWordList.size(); i++) {
 				String endWord = tempWordList.get(i);

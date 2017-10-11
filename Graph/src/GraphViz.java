@@ -14,28 +14,11 @@ import java.util.Properties;
 * <dd>
 *
 * <dt>Description:
-* <dd> With this Java class you can simply call dot
-*      from your Java programs.
-* <dt>Example usage:
+* ge:
 * <dd>
 * <pre>
-*    GraphViz gv = new GraphViz();
-*    gv.addln(gv.start_graph());
-*    gv.addln("A -> B;");
-*    gv.addln("A -> C;");
-*    gv.addln(gv.end_graph());
-*    System.out.println(gv.getDotSource());
-*
-*    String type = "gif";
-*    File out = new File("out." + type);   // out.gif in this example
-*    gv.writeGraphToFile( gv.getGraph( gv.getDotSource(), type ), out );
-* </pre>
-* </dd>
-*
-* </dl>
-*
 * @version v0.5.1, 2013/03/18 (March) -- Patch of Juan Hoyos (Mac support)
-* @version v0.5, 2012/04/24 (April) -- Patch of Abdur Rahman (OS detection + start subgraph + 
+* @version v0.5, 2012/04/24 (April) -- Patch of Abdur Rahman (OS detection + start subgraph +
 * read config file)
 * @version v0.4, 2011/02/05 (February) -- Patch of Keheliya Gallaba is added. Now you
 * can specify the type of the output file: gif, dot, fig, pdf, ps, svg, png, etc.
@@ -76,7 +59,7 @@ private static String DOT = configFile.getProperty("dotFor" + osName);
  /**
   * The image size in dpi. 96 dpi is normal size. Higher values are 10% higher each.
   * Lower values 10% lower each.
-  * 
+  *
   * dpi patch by Peter Mueller
   */
  private int[] dpiSizes = {46, 51, 57, 63, 70, 78, 86, 96, 106, 116, 128, 141, 155, 170, 187, 206, 226, 249};
@@ -84,7 +67,7 @@ private static String DOT = configFile.getProperty("dotFor" + osName);
  /**
   * Define the index in the image size array.
   */
- private int currentDpiPos = 7;
+ private int currentDpiPos = 8;
 
  /**
   * Increase the image size (dpi).
@@ -169,7 +152,7 @@ private static String DOT = configFile.getProperty("dotFor" + osName);
          if (dot != null)
          {
              img_stream = get_img_stream(dot, type);
-             if (dot.delete() == false) 
+             if (dot.delete() == false)
                  System.err.println("Warning: " + dot.getAbsolutePath() + " could not be deleted!");
              return img_stream;
          }
@@ -233,7 +216,7 @@ private static String DOT = configFile.getProperty("dotFor" + osName);
          // Close it if we need to
          if( in != null ) in.close();
 
-         if (img.delete() == false) 
+         if (img.delete() == false)
              System.err.println("Warning: " + img.getAbsolutePath() + " could not be deleted!");
      }
      catch (java.io.IOException ioe) {
@@ -310,7 +293,7 @@ private static String DOT = configFile.getProperty("dotFor" + osName);
 
  /**
   * Read a DOT graph from a text file.
-  * 
+  *
   * @param input Input text file containing the DOT graph
   * source.
   */
@@ -328,7 +311,7 @@ private static String DOT = configFile.getProperty("dotFor" + osName);
              sb.append(line);
          }
          dis.close();
-     } 
+     }
      catch (Exception e) {
          System.err.println("Error: " + e.getMessage());
      }
