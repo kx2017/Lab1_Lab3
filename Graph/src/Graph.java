@@ -8,6 +8,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.*;
 
 
+/* Graph  */
 public class Graph {
 	public static final int MAX = 99999;
 	private List<String> words;  //µ•¥ ¡–±Ì
