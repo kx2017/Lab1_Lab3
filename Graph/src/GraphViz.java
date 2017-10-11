@@ -10,9 +10,7 @@ import java.util.Properties;
 import java.io.*;
 import java.io.*;
 /**
-hhhh
-* <dl>
-* <dt>Purpose: GraphViz Java API
+hhhhpose: GraphViz Java API
 * <dd>
 *
 * <dt>Description:
