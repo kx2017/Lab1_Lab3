@@ -11,8 +11,6 @@ public class Graph {
 	public static final int MAX = 99999;
 	private List<String> words;  //单词列表
 	private Map<String, Integer> wordMap;  //将单词映射为编号
-	private int[][] value;  //表示图的二维矩阵
-	private boolean[][] pathFlag;  //表示最短路径的矩阵，便于将路径高亮显示
 
 	/**
 	 * 读取文件，处理文件内容
