@@ -50,9 +50,7 @@ public class Graph {
 			value = new int[words.size()][words.size()];
 			pathFlag = new boolean[words.size()][words.size()];
 			String startWord = words.get(0);  //边的起点
-			for (int i = 1; i < tempWordList.size(); i++) {
-				String endWord = tempWordList.get(i);
-				value[wordMap.get(startWord)][wordMap.get(endWord)]++;  //权重+1
+			for (intap.get(startWord)][wordMap.get(endWord)]++;  //权重+1
 				startWord = endWord;
 			}
 			bReader.close();
