@@ -17,9 +17,7 @@ import java.io.*;import java.util.Properties;
 import java.o.*;
 import java.io.*;
 /**
-
-* <dl>
-* <dt>Purpose: GraphViz Java API
+hhhhpose: GraphViz Java API
 * <dd>
 *
 * <dt>Description:
