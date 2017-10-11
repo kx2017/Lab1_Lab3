@@ -4,16 +4,14 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
+import java.io.UnsupportedEncodingException;import java.io.UnsupportedEncodingException;
 
 public class Graph {
     public int a;
-	public static final int MAX = 99999;
+	public static final int MX = 99999;
 	private List<String> words;  //单词列表
 	private Map<String, Integer> wordMap;  //将单词映射为编号
-	private int[][] value;  //表示图的二维矩阵
-	private boolean[][] pathFlag;  //表示最短路径的矩阵，便于将路径高亮显示
-
+private int a;
 	/**
 	 * 读取文件，处理文件内容
 	 * @param filePath 要读取的文件路径
