@@ -9,7 +9,7 @@ public class showImage extends JFrame {
     private JLabel jlb = new JLabel();
     private ImageIcon image;
     private int width, height;
-
+private int a;
     public showImage(String imgName) {
         try {
             a
