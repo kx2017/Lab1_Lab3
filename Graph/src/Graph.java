@@ -11,7 +11,7 @@ public class Graph {
 	public static final int MAX = 99999;
 	private List<String> words;  //单词列表
 	private Map<String, Integer> wordMap;  //将单词映射为编号
-
+private int a;
 	/**
 	 * 读取文件，处理文件内容
 	 * @param filePath 要读取的文件路径

@@ -11,7 +11,7 @@ public class showImage extends JFrame {
     private int width, height;
 private int a;
     public showImage(String imgName) {
-        try {
+        try
         	ge sourceImage = ImageIO.read(new FileInputStream(imgName));
         	with = sourceImage.getWidth() / 3;
             height = sourceImage.getHeight() / 3;
