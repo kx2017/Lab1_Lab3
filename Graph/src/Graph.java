@@ -9,6 +9,7 @@ import java.util.*;
 
 
 public class Graph {
+    public int a;
 	public static final int MAX = 99999;
 	private List<String> words;  //单词列表
 	private Map<String, Integer> wordMap;  //将单词映射为编号
