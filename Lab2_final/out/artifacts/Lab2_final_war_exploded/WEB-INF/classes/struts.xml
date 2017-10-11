@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE struts PUBLIC  
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"  
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+	<constant name="struts.action.extension" value="html,action,do,"/>
+	<package name="crud" extends="struts-default">
+		<action name="index">
+			<result>/index.jsp</result>
+		</action>
+
+		<!-- 列出所有书籍 -->
+		<action name="ListAll" class=" action.BookAction" method="list">
+			<result name="success">/ListAll.jsp</result>
+			<result name="confirmAuthorSuccess" type="redirect">/confirmAuthor.action</result>
+		</action>
+		
+<!-- 列出所有作者 -->
+		<action name="listAllAuthors" class=" action.BookAction" method="listAuthors">
+			<result name="success">/listAllAuthors.jsp</result>
+		</action>
+		
+<!-- 删除一本书 -->
+		<action name="deleteOneBook" class=" action.BookAction" method="deleteOneBook">
+			<result name="success" type="redirect">/list.action</result>
+		</action>
+		
+<!-- 同时删除多本书 -->
+		<action name="deleteManyBooks" class="top.sonack.crud.action.BookAction" method="deleteManyBooks">
+			<result name="success" type="redirect">/listAll.action</result>
+		</action>
+		
+<!-- 给定作者，查出其所著书籍 -->
+		<action name="searchBooks" class=" action.BookAction" method="searchBooks">
+			<result name="success">/listAll.jsp</result>
+		</action>
+		
+<!-- 增加书籍 -->
+		<action name="addBook">
+			<result name="success">/addBook.jsp</result>
+		</action>
+		
+<!-- 修改书籍信息 -->
+		<action name="updateBook" class=" action.BookAction" method="updateBook">
+			<result name="success">/updateBook.jsp</result>
+		</action>
+		
+<!-- 修改作者信息 -->
+		<action name="updateAuthor" class=" action.BookAction" method="updateAuthor">
+			<result name="success">/updateAuthor.jsp</result>
+		</action>
+		
+<!-- 列出作者的详细信息 -->
+		<action name="showBook" class=" action.BookAction" method="updateBook">
+			<result>/showBook.jsp</result>
+		</action>
+		
+<!-- 列出作者的详细信息 -->
+		<action name="showAuthor" class=" action.BookAction" method="updateAuthor">
+			<result>/showAuthor.jsp</result>
+		</action>
+	</package>
+</struts>
