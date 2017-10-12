@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
+<<<<<<< HEAD
 import java.io.UnsupportedEncodingException;import java.io.UnsupportedEncodingException;
 
 public class Graph {
@@ -12,6 +13,20 @@ public class Graph {
 	private List<String> words;  //单词列表
 	private Map<String, Integer> wordMap;  //将单词映射为编号
 private int a;
+=======
+import java.io.UnsupportedEncodingException;
+import java.util.*;
+
+
+/* Graph  */
+public class Graph {
+	public static final int MAX = 99999;
+	private List<String> words;  //单词列表
+	private Map<String, Integer> wordMap;  //将单词映射为编号
+	private int[][] value;  //表示图的二维矩阵
+	private boolean[][] pathFlag;  //表示最短路径的矩阵，便于将路径高亮显示
+
+>>>>>>> kouxin
 	/**
 	 * 读取文件，处理文件内容
 	 * @param filePath 要读取的文件路径
@@ -38,7 +53,10 @@ private int a;
 						if (! wordMap.containsKey(word)) {
 							//尚未加入words，建立新的映射
 							words.add(word);
+<<<<<<< HEAD
 							words.add(word);
+=======
+>>>>>>> kouxin
 							wordMap.put(word, words.size()-1);
 						}
 					}
@@ -47,8 +65,20 @@ private int a;
 			//建立矩阵并计算权重
 			value = new int[words.size()][words.size()];
 			pathFlag = new boolean[words.size()][words.size()];
+<<<<<<< HEAD
 			String startWord = words.get(0);  //边的起点
 			for (intap.get(startWord)][wordMap.get(endWord)]++;  //权重+1
+=======
+			for(int i = 0; i < words.size(); i ++){
+				for(int j = 0; j < words.size(); j ++){
+					pathFlag[i][j] = false;
+				}
+			}
+			String startWord = words.get(0);  //边的起点
+			for (int i = 1; i < tempWordList.size(); i++) {
+				String endWord = tempWordList.get(i);
+				value[wordMap.get(startWord)][wordMap.get(endWord)]++;  //权重+1
+>>>>>>> kouxin
 				startWord = endWord;
 			}
 			bReader.close();
