@@ -5,6 +5,7 @@ To seek new life and new civilizations?
 <<<<<<< HEAD
 To @ explore strange worlds, 
 To seek out new life and civili@#zations? 
+<<<<<<< HEAD
 To @ new new civilizations? 
 To @ explore strange new worlds, 
 
@@ -12,6 +13,9 @@ To @ explore strange new worlds,
 =======
 To seek out new li#fe and new civilizations? 
 To @ explore strange new worlds, 
+=======
+To @ new worlds, 
+>>>>>>> origin/zhaoyang
 To seek out new and new civilizations? 
 To @ explore strange new worlds, 
 To out new life and new civilizations? 
